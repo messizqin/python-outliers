@@ -17,7 +17,8 @@ git clone https://github.com/Weilory/python-outliers
 place `outliers` folder to base level directory
 
 <hr />
-```
+
+```python
 from outliers.variance import graph
 
 xs = [1, 2, 3, 4, 5]
@@ -41,7 +42,7 @@ graph(
 
 <hr />
 
-```
+```python
 from outliers.variance import graph
 
 rts = [
