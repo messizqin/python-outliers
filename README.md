@@ -1,6 +1,6 @@
 # Python Outliers
 
-:lying_face: :lying_face: :bomb: :bomb: :heartbeat: :heartbeat: :beach: :beach: :dizzy: :dizzy: :helicopter: :helicopter: 
+:lying_face: :lying_face: :bomb: :bomb: :heartbeat: :heartbeat: :butterfly: :butterfly: :dizzy: :dizzy: :helicopter: :helicopter: 
 
 #### *Illustating data and marking outliers*
 
