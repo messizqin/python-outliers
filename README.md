@@ -79,3 +79,53 @@ graph(
 ```
 
 ![exp](https://github.com/Weilory/python-outliers/blob/master/docs/img/exp.png)
+
+
+# How does it work?
+
+### standard deviation is defined as:
+
+><a href="https://www.codecogs.com/eqnedit.php?latex=S&space;=&space;\sqrt{\frac{\sum{(x-\bar{x})^2}}{N}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?S&space;=&space;\sqrt{\frac{\sum{(x-\bar{x})^2}}{N}}" title="S = \sqrt{\frac{\sum{(x-\bar{x})^2}}{N}}" /></a>
+
+>where S is the standard deviation of a sample, x is each value in the data set, x bar is the mean of all values in the data set, N is the number of values in the data set. 
+
+By this formula, we can work out the outlier of a stablized data. For example: 
+
+>[38.2, 38.1, 38, 40, 39, 37.2, 25] -> 25
+
+
+
+however, when exponential gets involved, for instance. if the equation is
+
+><a href="https://www.codecogs.com/eqnedit.php?latex=y&space;=&space;kx&space;&plus;&space;b" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y&space;=&space;kx&space;&plus;&space;b" title="y = kx + b" /></a>
+
+whereas the data follows a specific pattern, `standard error` becomes less efficient since it does not consider gradient of the polynomial.
+
+To be specific, consider following data:
+
+>[1, 3, 5.5, 7, 9, 12, 15]
+
+by `standard deviation`, the result will always be the edge values
+
+> [1, 15]
+
+Although it actually should be
+
+> [5.5]
+
+**Therefore, we regress the data into an formula at first, then evaulate how far each value is from the formula, to decide which one should be outliers**
+
+By using this module, we handle all postive integer exponential equation for you, whatever it is
+
+> <a href="https://www.codecogs.com/eqnedit.php?latex=y&space;=&space;ax^3&space;&plus;&space;bx^2&space;&plus;&space;cx&space;&plus;&space;d" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y&space;=&space;ax^3&space;&plus;&space;bx^2&space;&plus;&space;cx&space;&plus;&space;d" title="y = ax^3 + bx^2 + cx + d" /></a>
+
+even 
+
+><a href="https://www.codecogs.com/eqnedit.php?latex=y&space;=&space;\frac{1}{(4x&plus;1)^2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y&space;=&space;\frac{1}{(4x&plus;1)^2}" title="y = \frac{1}{(4x+1)^2}" /></a>
+
+or 
+
+><a href="https://www.codecogs.com/eqnedit.php?latex=y^4&space;=&space;\frac{9}{(2x&plus;1)^5}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y^4&space;=&space;\frac{9}{(2x&plus;1)^5}" title="y^4 = \frac{9}{(2x+1)^5}" /></a>
+
+In addition, all feature of `standard deviation` is inherited, which you can modify `m` to adjust `the propotion of data can be regarded as outlier`.
+
