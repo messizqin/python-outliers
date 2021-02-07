@@ -8,6 +8,10 @@
 
 >GUI for graphing **one** set of x values with **multiple** set of y values, adjustable `m` to select how many values are regarded as outliers.
 
+<hr />
+
+* refers to https://stackoverflow.com/questions/11686720/is-there-a-numpy-builtin-to-reject-outliers-from-a-list#comment114785064_11686720
+
 ## Get Started
 
 ```
